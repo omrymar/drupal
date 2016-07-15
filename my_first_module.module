@@ -1,0 +1,27 @@
+<?php
+// $Id$
+
+/**
+ * Implements hook_menu().
+ */
+function my_first_module_menu()
+{
+     $items['my_first_module'] = array(
+     'title' => 'My first module',
+     'description' => 'This is my first module in Drupal',
+     'page callback' => 'my_first_module_page',
+     'access arguments' => array('access content'),
+     );
+    return $items;
+}
+
+function my_first_module_page()
+{
+    $output = '';
+
+    $output .= '<p> Hello, this is my first module, it works, great!</p>';
+
+    return $output;
+
+
+}
